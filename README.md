@@ -6,11 +6,15 @@
 
 > **项目仓库**：<https://github.com/yuyue-2011/omni-toolbox> · 问题反馈与建议请提 [Issue](https://github.com/yuyue-2011/omni-toolbox/issues) · MIT 协议开源
 
+> 🌐 **在线体验（免安装）**：<https://yuyue-2011.github.io/omni-toolbox/> —— 浏览器直接打开即用，手机可「添加到主屏幕」，联网一次后离线可用
+
 包含 **224 款工具**，覆盖 **26 大分类**（含「视频平台」「图书」「学习」「文档」「购物」「通讯」板块），全站 **835 个官网直达站点**（含 83 个 AI 站点，国内 438 + 国际 397），**9 套主题**，所有资源直接打包进**单个 index.html**，可直接分发、双击即用、完全离线。
 
 ## 下载安装
 
 成品全部在 [Releases](https://github.com/yuyue-2011/omni-toolbox/releases/latest)，按平台取一个即可：
+
+> 只想试一下？直接用 [在线版](https://yuyue-2011.github.io/omni-toolbox/)，不必下载。
 
 | 平台 | 文件 | 大小 | 用法 |
 |---|---|---|---|
