@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       # 这两个脚本只用 Node 内置模块，无需安装依赖
       - name: 全部 JS 语法检查
@@ -33,14 +33,27 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       # 只需要 jsdom；跳过 electron / sharp 等重型 postinstall 下载
       - name: 安装测试依赖
         run: npm install --no-save --ignore-scripts --no-audit --no-fund jsdom@^30
 
+      - name: 校验依赖可解析
+        run: node -e "console.log('jsdom ->', require.resolve('jsdom'))"
+
       - name: 冒烟测试（224 款工具渲染 / 26 分类 / 中英 / 明暗）
-        run: node scripts/smoke-test.js
+        run: |
+          set -o pipefail
+          node scripts/smoke-test.js 2>&1 | tee _smoke.log
+
+      # 失败时把输出转成 annotation，便于在 API / 页面上定位具体失败行
+      - name: 失败诊断
+        if: failure()
+        run: |
+          echo "=== 冒烟输出（尾部 40 行）==="
+          tail -n 40 _smoke.log 2>/dev/null | while IFS= read -r line; do echo "::error::$line"; done
+          exit 1
 
       - name: 静态检查（注入 / id 冲突 / 注册一致性）
         run: node scripts/static-check.js
