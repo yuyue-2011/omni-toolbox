@@ -356,7 +356,7 @@ APK 输出在 `android/app/build/outputs/apk/debug/`。或用 Android Studio 直
 - 网络类工具直连公开 API（ipapi.co / ipinfo.io / open-meteo / api.github.com 等），失败时自动降级或友好提示，不收集任何数据
 - 代理识别为本地启发式判断（7 源对比出口 IP + 延迟），结果仅供参考
 - 视频提取下载器仅做链接识别与方案速查（浏览器 CORS 限制，不直接抓取视频流），请遵守平台规则与版权法规
-- **持续集成**：`.github/workflows/ci.yml` 在每次 push / PR 时跑三项零依赖检查——`check.js`（83 个文件语法）、`release-check.js`（版本 / 计数 / 文档 / 图标 / `www` 一致性）、`sites-final-test.js`（站点去重与国内优先排序）。渲染与交互测试（smoke / deep / game / ui-fix）依赖 jsdom 的 `file://` 资源加载，在 Linux runner 上会挂起，暂留本地用 `npm test` 执行
+- **持续集成**：`.github/workflows/ci.yml` 在每次 push / PR 时跑两个任务——① **快速门禁**（零依赖，约 30 秒）：`check.js` 语法、`release-check.js` 交付终检、`sites-final-test.js` 站点去重与国内优先排序；② **渲染与交互测试**（需 jsdom，约 5 分钟）：`smoke-test` 224 款工具渲染、`static-check` 注入与注册一致性、`dup-check` 重名重 id、`i18n-coverage-test` 双语覆盖。本地等价命令：`npm run check`、`npm test`
 
 ## 常见问题
 

@@ -10,7 +10,8 @@ permissions:
   contents: read
 
 jobs:
-  verify:
+  # 快速门禁：零依赖，30 秒内出结果
+  lint:
     name: 语法 / 终检 / 站点一致性
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -31,6 +32,29 @@ jobs:
       - name: 站点去重与「国内优先」排序
         run: node scripts/sites-final-test.js
 
-  # 渲染与交互测试（smoke / deep / game / ui-fix 等）依赖 jsdom 与 file:// 资源加载：
-  # static-check 在 Linux runner 上会卡在 resources: 'usable' 长时间不返回，
-  # 因此暂不放进 CI，改在本地执行：npm test
+  # 渲染与交互测试：只需 jsdom，跳过 electron / sharp 的 postinstall
+  test:
+    name: 渲染与交互测试
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 安装测试依赖
+        run: npm install --no-save --ignore-scripts --no-audit --no-fund jsdom@^30
+
+      - name: 冒烟测试（224 款工具渲染 / 26 分类 / 中英 / 明暗）
+        run: node scripts/smoke-test.js
+
+      - name: 静态检查（注入 / id 冲突 / 注册一致性）
+        run: node scripts/static-check.js
+
+      - name: 重名与重复 id
+        run: node scripts/dup-check.js
+
+      - name: 双语词条覆盖
+        run: node scripts/i18n-coverage-test.js
