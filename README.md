@@ -1,5 +1,7 @@
 # 万能工具箱 v3.4.1
 
+[![CI](https://github.com/yuyue-2011/omni-toolbox/actions/workflows/ci.yml/badge.svg)](https://github.com/yuyue-2011/omni-toolbox/actions/workflows/ci.yml) [![Releases](https://img.shields.io/github/v/release/yuyue-2011/omni-toolbox?label=release)](https://github.com/yuyue-2011/omni-toolbox/releases/latest) [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 跨平台超级工具合集：**一套代码，三端运行** —— 网页版（手机 / 电脑浏览器）、Windows 桌面版（EXE）、Android 版（APK）。
 
 > **项目仓库**：<https://github.com/yuyue-2011/omni-toolbox> · 问题反馈与建议请提 [Issue](https://github.com/yuyue-2011/omni-toolbox/issues) · MIT 协议开源
@@ -354,6 +356,7 @@ APK 输出在 `android/app/build/outputs/apk/debug/`。或用 Android Studio 直
 - 网络类工具直连公开 API（ipapi.co / ipinfo.io / open-meteo / api.github.com 等），失败时自动降级或友好提示，不收集任何数据
 - 代理识别为本地启发式判断（7 源对比出口 IP + 延迟），结果仅供参考
 - 视频提取下载器仅做链接识别与方案速查（浏览器 CORS 限制，不直接抓取视频流），请遵守平台规则与版权法规
+- **持续集成**：`.github/workflows/ci.yml` 在每次 push / PR 时自动跑两组任务——① 零依赖的 `check.js` + `release-check.js`（语法、版本、计数、文档、图标、`www` 一致性）；② 仅装 jsdom 的渲染与交互测试（冒烟、静态检查、重名/id、双语覆盖、站点排序）。本地等价命令：`npm run check`、`npm test`
 
 ## 常见问题
 

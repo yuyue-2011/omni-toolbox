@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: 语法与交付终检
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 这两个脚本只用 Node 内置模块，无需安装依赖
+      - name: 全部 JS 语法检查
+        run: node scripts/check.js
+
+      - name: 交付前终检（版本 / 计数 / 文档 / 图标 / www 一致性）
+        run: node scripts/release-check.js
+
+  test:
+    name: 渲染与交互测试
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 只需要 jsdom，跳过 electron 等重型依赖
+      - name: 安装测试依赖
+        run: npm install --no-save --no-audit --no-fund jsdom@^30
+
+      - name: 冒烟测试（224 款工具渲染 / 26 分类 / 中英 / 明暗）
+        run: node scripts/smoke-test.js
+
+      - name: 静态检查（注入 / id 冲突 / 注册一致性）
+        run: node scripts/static-check.js
+
+      - name: 重名与重复 id
+        run: node scripts/dup-check.js
+
+      - name: 双语词条覆盖
+        run: node scripts/i18n-coverage-test.js
+
+      - name: 站点去重与国内优先排序
+        run: node scripts/sites-final-test.js
