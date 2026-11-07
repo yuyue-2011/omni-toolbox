@@ -6,6 +6,28 @@
 
 包含 **224 款工具**，覆盖 **26 大分类**（含「视频平台」「图书」「学习」「文档」「购物」「通讯」板块），全站 **835 个官网直达站点**（含 83 个 AI 站点，国内 438 + 国际 397），**9 套主题**，所有资源直接打包进**单个 index.html**，可直接分发、双击即用、完全离线。
 
+## 下载安装
+
+成品全部在 [Releases](https://github.com/yuyue-2011/omni-toolbox/releases/latest)，按平台取一个即可：
+
+| 平台 | 文件 | 大小 | 用法 |
+|---|---|---|---|
+| 网页版（通用） | [`3.4.1-index.html`](https://github.com/yuyue-2011/omni-toolbox/releases/latest/download/3.4.1-index.html) | 1.2 MB | 双击即用；手机浏览器打开后可「添加到主屏幕」，联网一次后完全离线 |
+| Windows 安装版 | [`Setup-3.4.1.exe`](https://github.com/yuyue-2011/omni-toolbox/releases/latest/download/Setup-3.4.1.exe) | 84.2 MB | 可选安装目录、建桌面快捷方式；被 SmartScreen 拦截时点「更多信息 → 仍要运行」 |
+| Windows 绿色版 | [`Portable-3.4.1.exe`](https://github.com/yuyue-2011/omni-toolbox/releases/latest/download/Portable-3.4.1.exe) | 83.8 MB | 免安装、不写注册表，可放 U 盘 |
+| Android | [`3.4.1-android.apk`](https://github.com/yuyue-2011/omni-toolbox/releases/latest/download/3.4.1-android.apk) | 5.3 MB | debug 签名，安装需允许「未知来源」 |
+
+下载后建议核对 SHA256（完整清单见 [归档清单.txt](<归档清单.txt>)）：
+
+```
+7E3C71B1D09FDF61745F9AAE37435F93F9E65F6E12660287DB152172D99A745D  3.4.1-index.html
+AF888E931103C063FD82CCBFEB8495F0652AD558C5629C30DDC8C29BA43A3949  Setup-3.4.1.exe
+094B9D24AD8B09F6BCB8F574E52B6710ADCD3A5979193CB137ABB1B9FA079B7B  Portable-3.4.1.exe
+DA98B6D8008C831248AF6D2E4AE53A28F4139B59DFBFC50982B64F10130538BC  3.4.1-android.apk
+```
+
+> Windows 版未做代码签名，首次运行可能被 SmartScreen 提示，属正常现象；自行编译可用下文「打包 Windows EXE」。
+
 ## 工具清单（224 款 / 26 类）
 
 | 分类 | 数量 | 工具 |

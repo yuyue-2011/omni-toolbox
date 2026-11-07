@@ -14,14 +14,30 @@
   "bugs": {
     "url": "https://github.com/yuyue-2011/omni-toolbox/issues"
   },
+  "keywords": [
+    "toolbox",
+    "offline",
+    "pwa",
+    "electron",
+    "capacitor",
+    "utilities",
+    "developer-tools",
+    "中文"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "electron .",
+    "build": "node scripts/build-single.js",
     "build:exe": "electron-builder --dir --x64 && node scripts/patch-exe.js && electron-builder --prepackaged dist-exe/win-unpacked --win nsis portable --x64",
     "apk:sync": "node scripts/sync-www.js",
     "apk:init": "cap add android",
     "apk:build": "npm run apk:sync && cap sync android && cd android && gradlew.bat assembleDebug",
     "make-icons": "node scripts/make-icons.js",
-    "check": "node scripts/check.js"
+    "check": "node scripts/check.js",
+    "test": "node scripts/run-tests.js",
+    "archive": "node scripts/make-archive.js"
   },
   "devDependencies": {
     "@capacitor/cli": "^6.2.2",
