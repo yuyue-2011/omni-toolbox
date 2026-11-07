@@ -35,9 +35,9 @@ jobs:
         with:
           node-version: 20
 
-      # 只需要 jsdom，跳过 electron 等重型依赖
+      # 只需要 jsdom；跳过 electron / sharp 等重型 postinstall 下载
       - name: 安装测试依赖
-        run: npm install --no-save --no-audit --no-fund jsdom@^30
+        run: npm install --no-save --ignore-scripts --no-audit --no-fund jsdom@^30
 
       - name: 冒烟测试（224 款工具渲染 / 26 分类 / 中英 / 明暗）
         run: node scripts/smoke-test.js
