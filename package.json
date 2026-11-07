@@ -1,0 +1,73 @@
+{
+  "name": "omni-toolbox",
+  "productName": "万能工具箱",
+  "version": "3.4.1",
+  "description": "跨平台万能工具箱 v3.4.1：224 款工具 26 大类 835 个官网，网页版 / Windows EXE / Android APK 三端共一套代码",
+  "main": "electron/main.js",
+  "author": "OmniToolbox",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuyue-2011/omni-toolbox.git"
+  },
+  "homepage": "https://github.com/yuyue-2011/omni-toolbox#readme",
+  "bugs": {
+    "url": "https://github.com/yuyue-2011/omni-toolbox/issues"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build:exe": "electron-builder --dir --x64 && node scripts/patch-exe.js && electron-builder --prepackaged dist-exe/win-unpacked --win nsis portable --x64",
+    "apk:sync": "node scripts/sync-www.js",
+    "apk:init": "cap add android",
+    "apk:build": "npm run apk:sync && cap sync android && cd android && gradlew.bat assembleDebug",
+    "make-icons": "node scripts/make-icons.js",
+    "check": "node scripts/check.js"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.2",
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8",
+    "jsdom": "^30.0.1",
+    "png-to-ico": "^2.1.8",
+    "rcedit": "^5.0.1",
+    "sharp": "^0.33.5"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.2",
+    "@capacitor/core": "^6.2.2"
+  },
+  "build": {
+    "appId": "com.omnitool.box",
+    "productName": "万能工具箱",
+    "directories": {
+      "output": "dist-exe"
+    },
+    "files": [
+      "index.html",
+      "css/**/*",
+      "js/**/*",
+      "icons/**/*",
+      "manifest.webmanifest",
+      "sw.js",
+      "electron/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "icons/icon.ico",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "万能工具箱",
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "${productName}-Portable-${version}.${ext}"
+    }
+  }
+}

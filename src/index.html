@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#121417">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="万能工具箱">
+<meta name="description" content="万能工具箱 v3.4.1：224 款跨平台工具合集，覆盖 26 大类，835 个官网直达站点（含 83 个 AI 站点），100 国国旗、9 种界面语言、中英双语，9 套主题，支持网页、Windows、Android 三端。">
+<title>万能工具箱 - 跨平台超级工具合集</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-32.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="statusbar" id="statusbar" aria-label="实时状态">
+  <div class="sb-left">
+    <span class="sb-online off" id="sbOnline"><i></i><b>…</b></span>
+    <span class="sb-time" id="sbTime">--:--:--</span>
+    <span class="sb-date" id="sbDate">----年--月--日</span>
+  </div>
+  <div class="sb-right">
+    <span class="sb-item" id="sbGeo" title="所在地区">📍 定位中…</span>
+    <span class="sb-item sb-weather" id="sbWeather" title="天气">🌡️ --°C</span>
+    <span class="sb-item sb-ip" id="sbIp" title="公网 IP（点击复制）">🛜 --</span>
+    <span class="sb-item sb-proxy off" id="sbProxy" title="代理识别（点击查看说明）">🛡️ 检测中…</span>
+    <button class="sb-btn" id="sbHelp" title="使用说明书" aria-label="使用说明书">📖</button>
+    <button class="sb-btn" id="sbRefresh" title="刷新网络信息" aria-label="刷新网络信息">⟳</button>
+    <button class="sb-btn sb-gear" id="sbGear" title="外观与设置" aria-label="外观与设置">⚙ 设置</button>
+  </div>
+</div>
+
+<div class="app" id="app">
+
+  <aside class="sidebar" id="sidebar" aria-label="主导航">
+    <div class="brand" role="button" tabindex="0" id="brandBtn" aria-label="回到首页">
+      <div class="brand-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5h16v11H4z"/><path d="M8 8.5V6.2A1.2 1.2 0 0 1 9.2 5h5.6A1.2 1.2 0 0 1 16 6.2v2.3"/><path d="M4 13h16"/><path d="M8 13v2.6M12 13v2.6M16 13v2.6"/></svg>
+      </div>
+      <div class="brand-text">
+        <b>万能工具箱</b>
+        <span id="brandSub">224 款工具 · 三端可用</span>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/></svg>
+      <input id="searchInput" type="search" placeholder="搜索工具、功能…" autocomplete="off" spellcheck="false">
+    </div>
+
+    <nav class="cat-nav" id="catNav" aria-label="工具分类"></nav>
+
+    <div class="side-foot">
+      <span class="ver">v{{VERSION}} · 网页 / EXE / APK</span>
+      <button class="ghost-btn" id="installBtn" hidden>安装到本机</button>
+    </div>
+  </aside>
+
+  <div class="mask" id="mask" hidden></div>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="menuBtn" aria-label="打开菜单">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="crumb" id="crumb">首页</div>
+    </header>
+    <div class="view" id="view"></div>
+  </main>
+
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>window.APP_VERSION = "{{VERSION}}";</script>
+<script src="js/core.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/i18n-more.js"></script>
+<script src="js/vendor/qrcode.js"></script>
+<script src="js/tools/calc.js"></script>
+<script src="js/tools/text.js"></script>
+<script src="js/tools/i18ntools.js"></script>
+<script src="js/tools/codec.js"></script>
+<script src="js/tools/time.js"></script>
+<script src="js/tools/random.js"></script>
+<script src="js/tools/image.js"></script>
+<script src="js/tools/data.js"></script>
+<script src="js/tools/life.js"></script>
+<script src="js/tools/work.js"></script>
+<script src="js/tools/net.js"></script>
+<script src="js/tools/ai.js"></script>
+<script src="js/tools/sys.js"></script>
+<script src="js/tools/game.js"></script>
+<script src="js/tools/search.js"></script>
+<script src="js/tools/code.js"></script>
+<script src="js/tools/video.js"></script>
+<script src="js/tools/down.js"></script>
+<script src="js/tools/cloud.js"></script>
+<script src="js/tools/github.js"></script>
+<script src="js/tools/extra.js"></script>
+<script src="js/tools/shop.js"></script>
+<script src="js/tools/com.js"></script>
+<script src="js/tools/more1.js"></script>
+<script src="js/tools/more2.js"></script>
+<script src="js/tools/more3.js"></script>
+<script src="js/tools/more4.js"></script>
+<script src="js/tools/more5.js"></script>
+<script src="js/tools/more6.js"></script>
+<script src="js/tools/more7.js"></script>
+<script src="js/tools/more8.js"></script>
+<script src="js/tools/more9.js"></script>
+<script src="js/tools/more10.js"></script>
+<script src="js/tools/comm.js"></script>
+<script src="js/tools/vplat.js"></script>
+<script src="js/tools/music.js"></script>
+<script src="js/tools/book.js"></script>
+<script src="js/tools/study.js"></script>
+<script src="js/tools/flags.js"></script>
+<script src="js/tools/doc.js"></script>
+<script>Toolbox.boot();</script>
+</body>
+</html>

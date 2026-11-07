@@ -1,0 +1,278 @@
+================================================================
+  万能工具箱 v3.4.1 · 归档清单（详细版）
+  生成时间: 2026-11-07 21:09
+================================================================
+
+一、项目概况
+----------------------------------------------------------------
+  定位      跨平台超级工具合集，一套代码三端运行
+  仓库      https://github.com/yuyue-2011/omni-toolbox
+  归档状态  半归档（内容冻结：源码 + 三端产物齐备，可直接交付）
+  最近维护  2026-11-07 仓库地址注入与三端重建（详见八）
+  工具      224 款（26 大分类，详见三）
+  官网站点  835 个（主流 286 + 小众 549，国内 438 + 国际 397）
+  AI 板块   11 款工具 + 83 个站点
+  主题      9 套（明 / 暗 / 琥珀 / 海洋 / 紫罗兰 / 赛博朋克 等）
+  界面语言  中文 + English 双语
+  技术栈    纯前端 HTML + CSS + 原生 JS（无框架），第三方仅 qrcode-generator(MIT)
+  离线      单文件 index.html 内联全部资源，Service Worker 缓存主文档
+
+二、分发产物
+----------------------------------------------------------------
+  网页版（手机 / 电脑浏览器，双击即用）                                            1.2 MB     2026-11-07 20:58
+  Windows 安装版（可选目录、建桌面快捷方式）                                       80.3 MB    2026-11-07 21:07
+  Windows 绿色版（不写注册表，可放 U 盘）                                       79.9 MB    2026-11-07 21:07
+  Android APK（debug 签名，需开启「允许安装未知来源」）                             5.0 MB     2026-11-07 21:09
+
+  产物校验（SHA256）：
+    index.html                              7E3C71B1D09FDF61745F9AAE37435F93F9E65F6E12660287DB152172D99A745D
+    万能工具箱-Setup-3.4.1.exe                   AF888E931103C063FD82CCBFEB8495F0652AD558C5629C30DDC8C29BA43A3949
+    万能工具箱-Portable-3.4.1.exe                094B9D24AD8B09F6BCB8F574E52B6710ADCD3A5979193CB137ABB1B9FA079B7B
+    万能工具箱-3.4.1-android.apk                 DA98B6D8008C831248AF6D2E4AE53A28F4139B59DFBFC50982B64F10130538BC
+
+  使用方法：
+    网页版  双击 index.html；手机浏览器打开后「添加到主屏幕」，可完全离线
+    安装版  双击 Setup.exe → 被SmartScreen拦截时点「更多信息 → 仍要运行」
+    绿色版  双击 Portable.exe 即用，不写注册表、不留配置
+    安卓版  传输 APK 到手机开启「允许安装未知来源」后安装
+  新功能直达（搜索框输入）：Base32 / 维吉尼亚 / 栅栏 / 中文数字 / 数字转英文 / 渐变 / CRC32 /
+    Properties / CSV 转 Markdown / 数独 / 命名风格 / Slug / XML / JSON 转 TypeScript / 条形码 / ISO 周数 /
+    俄罗斯方块 / 打砖块 / 华容道 / 井字棋 / 猜数字 / 猜拳 / 抛硬币 / 记分板
+
+三、工具清单（224 款 / 26 类）
+----------------------------------------------------------------
+  搜索    （4）  镜像源导航、聚合搜索、搜索语法、网站导航
+  计算    （16）  百分比计算、车贷计算、单位换算、房贷计算器、复利计算、个人所得税、进制转换、科学计算器、利润率计算、罗马数字互转、年龄计算、日期计算、社保公积金、油耗费用、折扣计算、BMI 计算
+  文本    （26）  大小写转换、多语言翻译、高级字数统计、火星文转换、简繁转换、离线常用语、密码强度检测、密码生成器、命名风格转换、批量替换、拼音转换、数字转英文、文本对比、文本反转、文本整理、文本重复、行排序去重、中文数字互转、字数统计、Base64 编解码、HTML 转 Markdown、JSON 格式化、Lorem 占位文本、URL 编解码、URL 参数解析、URL Slug 生成
+  编码    （13）  二维码生成、凯撒密码、摩斯密码、条形码生成、维吉尼亚密码、栅栏密码、Base32 编解码、Base64 文件转码、GZIP 压缩 / 解压、Hex 与文本互转、HTML 转义、JWT 解析、MD5 / SHA 哈希
+  时间    （8）  倒计时、纪念日倒计时、节假日速查、秒表、时间戳批量转换、时间戳转换、世界时钟、ISO 周数计算
+  随机    （6）  抽签抽奖、抽签抽人、随机分组、随机数生成、选择助手、掷骰子
+  图片    （7）  渐变生成器、色盲模拟、图片压缩、图片主色、图片转 Base64、颜色对比度检测、颜色拾取
+  数据    （16）  词频统计、集合运算、统计计算、文本差异对比、柱状图生成、CRC32 校验、CSV ↔ JSON 互转、CSV 预览、CSV 转 Markdown、JSON ↔ YAML 互转、JSON 树查看、JSON 数组转表格、JSON 转 TypeScript、JSONPath 查询、Properties 转 JSON、XML ↔ JSON 互转
+  生活    （6）  汇率换算、金额大写、礼物灵感、身份证解析、生肖属相、星座查询
+  效率    （6）  便签、待办清单、番茄钟、记事本、密码保险箱、邮件模板
+  网络    （10）  常用端口、代理出口检测、链接解析、网络状态、网速测试、网站状态、延迟检测、子网计算、DNS 解析、IP 信息
+  AI    （11）  标题生成、起名灵感、提示词变量填充、提示词生成器、文本智能处理、AI 工具导航、AI 绘图提示词、AI 模型速查、AI 提问技巧、Prompt 模板库、Token 计数器
+  系统    （10）  特性检测、系统清理、系统信息、性能监视、硬件工具箱、字体检测、ADB 速查、UA 解析、Win 快捷键、Windows 命令
+  游戏    （15）  2048、猜拳、猜数字、打砖块、打字测速、俄罗斯方块、反应测试、记忆翻牌、井字棋、抛硬币、扫雷、数独、数字华容道、贪吃蛇、桌游记分板
+  编程    （12）  编程速查表、代码格式化、短 ID 生成、颜色转换、正则测试、Cron 表达式、HTTP 调试、JS 运行、SQL 格式化、ULID 批量生成、Unicode 转换、UUID 生成
+  视频    （8）  本地视频播放、封面九宫格、片段截取、视频抽帧、视频截图、视频信息、视频转 GIF、音频提取
+  下载    （4）  磁力链接解析、批量下载、下载协议、直链下载
+  云盘    （4）  链接转二维码、提取码生成、网盘横评、网盘链接管理
+  GitHub（5）  仓库查询、用户查询、最新版本、GitHub 速查、README 预览
+  购物    （6）  尺码换算、防骗指南、购物清单、快递速查、省钱技巧、退换攻略
+  通讯    （8）  常用号码、短信模板、国际区号、国内区号、号码归属地、通讯录、消息模板、运营商识别
+  视频平台  （5）  观影清单、类型速查、平台对比、视频平台导航、视频提取下载器
+  音乐    （5）  节拍器、万能格式转换、我的歌单、音调发生器、音乐平台导航
+  图书    （4）  书单灵感、图书检索导航、阅读记录本、ISBN 校验
+  学习    （5）  国旗速查、记忆闪卡、学习打卡、学习方法库、学习平台导航
+  文档    （4）  图片转 PDF、文本文件合并、文档格式速查、Markdown 预览
+
+四、官网站点（835 个 · 逐分类明细）
+----------------------------------------------------------------
+  规则：每分类「3 行主流（≤12 个，国内优先）+ 更多按钮 → 小众站点」
+  国内(CN) 站点一律排在国际(INT) 站点之前（主流区与小众区分别保证）
+
+  分类          站点   国内   国际   主流   小众
+  ────────────────────────────────────────
+  search 搜索   29   12   17   12   17
+  calc 计算     25   6    19   12   13
+  text 文本     27   15   12   12   15
+  codec 编码    26   7    19   9    17
+  time 时间     22   10   12   8    14
+  random 随机   18   5    13   5    13
+  life 生活     24   23   1    9    15
+  ai AI       83   30   53   20   63
+  net 网络      28   17   11   10   18
+  image 图片    26   10   16   10   16
+  video 视频处理  29   13   16   10   19
+  down 下载     26   8    18   9    17
+  cloud 云盘    28   17   11   12   16
+  data 数据     25   11   14   10   15
+  work 效率     26   16   10   10   16
+  study 学习    36   27   9    12   24
+  doc 文档      34   15   19   12   22
+  vplat 视频平台  31   24   7    12   19
+  music 音乐    28   17   11   12   16
+  book 图书     34   28   6    12   22
+  game 游戏     38   29   9    10   28
+  code 编程     49   18   31   12   37
+  github GitHub25   7    18   10   15
+  shop 购物     28   18   10   12   16
+  com 通讯      32   18   14   12   20
+  sys 系统      58   37   21   12   46
+  ────────────────────────────────────────
+  合计          835  438  397  286  549
+
+  AI 分类站点全名单（小众区默认折叠，点「更多」展开）：
+    1.  DeepSeek                  国内   主流  https://www.deepseek.com
+    2.  智谱清言 GLM                  国内   主流  https://chatglm.cn
+    3.  Kimi 月之暗面                 国内   主流  https://kimi.moonshot.cn
+    4.  通义千问                      国内   主流  https://tongyi.aliyun.com
+    5.  文心一言                      国内   主流  https://yiyan.baidu.com
+    6.  豆包                        国内   主流  https://www.doubao.com
+    7.  腾讯元宝                      国内   主流  https://yuanbao.tencent.com
+    8.  MiniMax                   国内   主流  https://www.minimaxi.com
+    9.  讯飞星火                      国内   主流  https://xinghuo.xfyun.cn
+    10. 百川智能                      国内   主流  https://www.baichuan-ai.com
+    11. OpenAI ChatGPT            国际   主流  https://chat.openai.com
+    12. Anthropic Claude          国际   主流  https://claude.ai
+    13. Google Gemini             国际   主流  https://gemini.google.com
+    14. 微软 Copilot                国际   主流  https://copilot.microsoft.com
+    15. Hugging Face              国际   主流  https://huggingface.co
+    16. Cursor 编辑器                国际   主流  https://www.cursor.com
+    17. Midjourney                国际   主流  https://www.midjourney.com
+    18. Perplexity                国际   主流  https://www.perplexity.ai
+    19. OpenRouter                国际   主流  https://openrouter.ai
+    20. OpenCode                  国际   主流  https://opencode.ai
+    21. 秘塔 AI 搜索                  国内   小众  https://metaso.cn
+    22. 天工 AI                     国内   小众  https://www.tiangong.cn
+    23. 阶跃星辰                      国内   小众  https://yuewen.cn
+    24. 商汤商量 SenseChat            国内   小众  https://chat.sensetime.com
+    25. 澜舟科技孟夫子                   国内   小众  https://www.langboat.com
+    26. Jasper AI                 国际   小众  https://www.jasper.ai
+    27. Copy.ai                   国际   小众  https://www.copy.ai
+    28. Writesonic                国际   小众  https://writesonic.com
+    29. Rytr                      国际   小众  https://rytr.me
+    30. Notion AI                 国际   小众  https://www.notion.so/product/ai
+    31. Stable Diffusion          国际   小众  https://stability.ai
+    32. Civitai 模型库               国际   小众  https://civitai.com
+    33. OpenArt                   国际   小众  https://openart.ai
+    34. NightCafe                 国际   小众  https://creator.nightcafe.studio
+    35. Lexica 灵感图                国际   小众  https://lexica.art
+    36. 触站                        国内   小众  https://www.huashi6.com
+    37. Photoroom 抠图              国际   小众  https://www.photoroom.com
+    38. Magnific 放大               国际   小众  https://magnific.ai
+    39. Upscayl                   国际   小众  https://upscayl.org
+    40. Let's Enhance             国际   小众  https://letsenhance.io
+    41. Suno 音乐                   国际   小众  https://suno.com
+    42. ElevenLabs 配音             国际   小众  https://elevenlabs.io
+    43. Murf 配音                   国际   小众  https://murf.ai
+    44. Descript 音频               国际   小众  https://www.descript.com
+    45. Adobe Podcast             国际   小众  https://podcast.adobe.com
+    46. HeyGen 数字人                国际   小众  https://www.heygen.com
+    47. Synthesia 视频              国际   小众  https://www.synthesia.io
+    48. D-ID 数字人                  国际   小众  https://www.d-id.com
+    49. Invideo AI                国际   小众  https://invideo.io
+    50. 剪映                        国内   小众  https://www.jianying.com
+    51. 即梦 AI                     国内   小众  https://jimeng.jianying.com
+    52. 通义灵码                      国内   小众  https://tongyi.aliyun.com/lingma
+    53. 文心快码 Comate               国内   小众  https://comate.baidu.com
+    54. CodeGeeX                  国内   小众  https://codegeex.cn
+    55. Codeium                   国际   小众  https://codeium.com
+    56. Tabnine                   国际   小众  https://www.tabnine.com
+    57. Replit                    国际   小众  https://replit.com
+    58. v0 生成器                    国际   小众  https://v0.dev
+    59. Bolt.new                  国际   小众  https://bolt.new
+    60. Lovable                   国际   小众  https://lovable.dev
+    61. Coze 智能体                  国内   小众  https://www.coze.cn
+    62. Dify 平台                   国际   小众  https://dify.ai
+    63. FastGPT                   国内   小众  https://fastgpt.in
+    64. Ollama 本地模型               国际   小众  https://ollama.com
+    65. LM Studio                 国际   小众  https://lmstudio.ai
+    66. NextChat 客户端              国际   小众  https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web
+    67. LobeChat                  国际   小众  https://lobehub.com
+    68. Chatbox 客户端               国内   小众  https://chatboxai.app
+    69. GPT4All 离线                国际   小众  https://gpt4all.io
+    70. Jan 离线助手                  国际   小众  https://jan.ai
+    71. GPTZero 检测                国际   小众  https://gptzero.me
+    72. Originality 检测            国际   小众  https://originality.ai
+    73. 机器之心                      国内   小众  https://www.jiqizhixin.com
+    74. 量子位                       国内   小众  https://www.qbitai.com
+    75. Atria Dawn                国内   小众  https://atria-asi.ai/
+    76. Phind 搜索                  国际   小众  https://www.phind.com
+    77. Devv 搜索                   国际   小众  https://devv.ai
+    78. Felo 搜索                   国际   小众  https://felo.ai
+    79. Gamma PPT                 国际   小众  https://gamma.app
+    80. 美图 AI PPT                 国内   小众  https://www.aippt.cn
+    81. 讯飞智文                      国内   小众  https://zhiwen.xfyun.cn
+    82. Motiff AI 设计              国内   小众  https://www.motiff.com
+    83. Galileo AI                国际   小众  https://www.usegalileo.ai
+
+五、源码结构（关键文件）
+----------------------------------------------------------------
+  src/index.html        开发模板（构建后内联为单文件 index.html）
+  js/core.js            框架核心：路由 / 注册表 / CATS 分类与站点数据 / 官网导航
+  js/i18n.js            中英双语（含帮助页更新日志）
+  js/tools/*.js         26 个分类的工具实现（224 款）
+  js/vendor/qrcode.js   二维码库（MIT，qrcode-generator）
+  css/app.css           全部样式（9 套主题 / 液态玻璃 / 更多按钮）
+  electron/main.js      Electron 主进程
+  android/              Capacitor 原生工程（含 gradle 配置）
+  www/                  Capacitor webDir（与 index.html 同步）
+  scripts/              构建 / 测试脚本（36 个，详见六）
+  manifest.webmanifest  PWA 清单；sw.js Service Worker
+
+六、构建与测试脚本（scripts/）
+----------------------------------------------------------------
+  构建
+    build-single.js     内联为单文件 index.html（构建入口）
+    sync-www.js         同步到 www/（APK 资源源）
+    build-exe.js        electron-builder 完整打包（--dir → 注入图标 → --prepackaged）
+    build-apk.js        cap sync + gradlew assembleDebug
+    make-icons.js       生成各尺寸图标
+    patch-exe.js        EXE 产物改名 / rcedit
+    make-archive.js     生成本归档清单
+  测试链（final-test.js 依次调用，任一失败整体退出非 0）
+    1  check.js                 全部 JS 语法检查
+    2  static-check.js          注入 / id 冲突 / 注册一致性
+    3  smoke-test.js            224 款渲染 + 26 分类 + 中英 + 明暗
+    4  deep-test.js             逐工具填输入 + 点按钮 + 堆栈级捕获
+    5  settings-test.js         设置页与帮助页实测
+    6  new-tools-test.js        v2.9.1 四款新工具
+    7  ai-tools-test.js         4 款 AI 工具
+    8  v3-tools-test.js         11 款 v3.0 新工具
+    9  sites-more-test.js       26 分类「更多」展开/收起（含计算样式断言）
+    10 sites-final-test.js      站点去重 / 国内优先 / 计数与文档一致
+    11 dup-check.js             重名 / 重 id 扫描
+    12 i18n-coverage-test.js    工具中英名称 / 描述全覆盖
+    13 game-test.js             15 款游戏渲染 + 交互 + 修复回归
+    14 ui-fix-test.js           布局 / 按钮位置 / 火星文 / 设置持久化回归
+  终检与辅助
+    release-check.js    交付前终检（91 项）
+    run-tests.js        快速回归（smoke + deep + ui-fix，日志写 _testlog/）
+    run.js              PowerShell 包装，输出写 _testlog/<名>.log
+    dump-tools.js       从构建产物提取真实注册表生成工具表
+    fav-test.js / test-vectors.js / version-test.js   收藏 / 哈希向量 / 版本号
+    sites-count.js / sites-dump.js / state-check.js   站点统计 / 导出 / 状态核查
+    list-ids.js / load-errors.js                     工具 id 列表 / 加载错误
+    diag-font.js / diag-yaml.js                     开发期诊断
+
+七、重新构建
+----------------------------------------------------------------
+  npm install
+  node scripts/build-single.js                        单文件 index.html
+  node scripts/run.js scripts/final-test.js final     完整测试链（14 项）
+  node scripts/run.js scripts/release-check.js release  终检（91 项）
+  node scripts/sync-www.js                            同步 www/
+  node scripts/build-exe.js                           Windows EXE
+  node scripts/build-apk.js                           Android APK
+  node scripts/make-archive.js                        重新生成本清单
+
+  Windows 实战备忘：
+    项目路径含中文时 AGP 8 拒绝构建 → android/gradle.properties 加 android.overridePathCheck=true
+    SDK 缺失时下载 command-line tools 到无中文路径，sdkmanager --licenses 后写 local.properties
+    Capacitor 6 CLI 入口为 node_modules/@capacitor/cli/bin/capacitor（无 .js 后缀）
+
+八、验证状态
+----------------------------------------------------------------
+  测试链     14 项全绿（check / static / smoke / deep / settings / new-tools /
+             ai-tools / v3-tools / sites-more / sites-final / dup-check / i18n-coverage /
+             game-test / ui-fix-test）
+  维护修复   isEn 按实际语言判定（修复「跟随系统」语言中英混排）；
+             Electron 主框架导航拦截；国旗速查 92→100；侧栏初始工具数 224；
+             测试脚本补齐 scrollTo 桩与中文基线；语法检查排除构建产物、清理死代码
+  界面回归   320–1280px 十档宽度 + 140% 字号：无遮挡 / 无横向溢出 / 按钮不重叠；
+             火星文转换（含空输入提示 / 清空 / 只读）通过
+  终检       91 项全过
+  站点       URL 重复 0 处；26 分类主流区与小众区均国内优先于国际
+  工具       重名 0 组 / 重 id 0 组；224 款全部通过逐工具交互测试
+  图标       224 款工具图标全覆盖（同分类零重复）；26 分类 SVG 圆角描边统一；应用图标全出血 + 6 帧 ICO
+  产物       三端均已按 v3.4.1（含 2026-10-31 维护修复）重新构建；
+             网页版 index.html / www/ / APK 内嵌页面三份哈希一致（835 站点 / 224 工具）
+  最近构建   2026-11-07 21:09
+  归档整理   清理 _testlog 过期重复日志；根目录与 _release 两份清单同步；产物校验见二
+
+================================================================
+  （本清单由 scripts/make-archive.js 自动生成，数据全部来自代码注册表）
+================================================================

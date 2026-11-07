@@ -1,0 +1,17 @@
+{
+  "name": "万能工具箱",
+  "short_name": "工具箱",
+  "description": "224 款跨平台工具合集，26 大分类，835 个官网直达站点（国内 438 + 国际 397）：搜索、计算、文本、编码、时间、随机、生活、AI、网络、图片、视频处理、下载、云盘、数据、效率、学习、文档、视频平台、音乐、图书、游戏、编程、GitHub、购物、通讯、系统。支持网页、Windows、Android 三端，完全离线可用。",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#121417",
+  "theme_color": "#121417",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

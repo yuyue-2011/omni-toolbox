@@ -1,0 +1,13 @@
+{
+  "appId": "com.omnitool.box",
+  "appName": "万能工具箱",
+  "webDir": "www",
+  "backgroundColor": "#121417",
+  "android": {
+    "backgroundColor": "#121417",
+    "allowMixedContent": false
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}

@@ -1,0 +1,27 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist-exe/
+dist-exe-build/
+_release/
+*.apk
+*.exe
+*.exe.blockmap
+
+# Android 原生构建
+android/.gradle/
+android/build/
+android/app/build/
+android/capacitor-cordova-android-plugins/build/
+android/local.properties
+
+# 测试 / 临时日志（脚本本身保留，仅忽略输出）
+_testlog/
+
+# 工作区元数据（WorkBuddy 项目记忆 / 会话数据，不入库）
+.workbuddy/
+
+# 系统
+Thumbs.db
+.DS_Store

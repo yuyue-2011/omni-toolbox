@@ -1,0 +1,9 @@
+# 统一换行符：保证 index.html 与三端产物 SHA256 在各平台一致
+* text=auto eol=lf
+
+# 二进制文件不做换行转换
+*.png binary
+*.ico binary
+*.jpg binary
+*.apk binary
+*.exe binary
